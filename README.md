@@ -1,24 +1,16 @@
-# Simple Use Case Traffix
+# React + Vite
 
-This application is built using tech react js with state management using zustand for icons and ui component needs using a library that I created myself.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-To use the UI component and icons library, you can read the documentation from the link below.
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## How to Initiate a Project
+## React Compiler
 
-git clone.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### How to run the application after cloning
+## Expanding the ESLint configuration
 
-**1. Install Packages**
-
-```bash
-npm install atau npm i
-```
-
-**2. Run dev all project**
-
-```bash
-npm run dev
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

@@ -1,1 +1,73 @@
 @import "tailwindcss";
+
+/* Responsive breakpoints */
+@layer base {
+  .container {
+    @apply max-w-full;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      @apply max-w-screen-sm;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      @apply max-w-screen-md;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      @apply max-w-screen-lg;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      @apply max-w-screen-xl;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      @apply max-w-screen-2xl;
+    }
+  }
+}
+
+/* Custom responsive utilities */
+@layer utilities {
+  .h-screen-available {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .text-ellipsis {
+    text-overflow: ellipsis;
+  }
+
+  /* Hide scrollbar but keep scrolling functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+/* Global styles to hide scrollbars but keep functionality */
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Webkit browsers but keep functionality */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}

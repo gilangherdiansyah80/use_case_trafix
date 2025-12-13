@@ -41,7 +41,7 @@ const TabsTrigger = ({ value, children, className = "" }) => {
   return (
     <button
       onClick={() => setActiveTab(value)}
-      className={`px-4 py-2 text-sm font-medium transition-all border-b-2 outline-none
+      className={`px-3 py-2 text-sm font-medium transition-all border-b-2 outline-none
         ${
           isActive
             ? "border-blue-600 text-blue-600"

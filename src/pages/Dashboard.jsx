@@ -12,7 +12,7 @@ const Dashboard = () => {
     switch (activeTab) {
       case "live-tracking":
         return (
-          <div className="w-full h-[calc(100vh-200px)]">
+          <div className="w-full h-[calc(100vh-150px)] md:h-[calc(100vh-200px)] hide-scrollbar">
             <MapWidget />
           </div>
         );
@@ -26,7 +26,7 @@ const Dashboard = () => {
     }
   };
 
-  return <div className="w-full">{renderContent()}</div>;
+  return <div className="w-full h-full hide-scrollbar">{renderContent()}</div>;
 };
 
 export default Dashboard;

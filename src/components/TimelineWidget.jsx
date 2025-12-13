@@ -16,21 +16,21 @@ const TimelineWidget = () => {
   };
 
   return (
-    <Card className="h-full w-full">
+    <Card className="h-full w-full hide-scrollbar">
       <CardHeader className="text-lg font-bold text-gray-800">
         Driver Activity Timeline
       </CardHeader>
 
-      <CardBody>
-        <div className="relative pl-2">
+      <CardBody className="hide-scrollbar">
+        <div className="relative pl-2 max-h-[calc(100vh-300px)] overflow-y-auto hide-scrollbar">
           {/* Vertical Line */}
           <div className="absolute left-[7px] top-2 bottom-4 w-0.5 bg-gray-100"></div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 pr-2 hide-scrollbar">
             {notifications.map((item, index) => (
               <div
                 key={item.id}
-                className="relative flex items-start pl-6 gap-3 group"
+                className="relative flex items-start pl-6 gap-3 group flex-wrap hide-scrollbar"
               >
                 {/* Dot */}
                 <div
@@ -39,8 +39,8 @@ const TimelineWidget = () => {
                   )}`}
                 ></div>
 
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors truncate">
                     {item.message}
                   </p>
                   <p className="text-xs text-gray-400 mt-0.5">

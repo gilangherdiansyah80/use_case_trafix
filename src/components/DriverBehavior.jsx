@@ -4,8 +4,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "./ui/Card";
 
 const DriverBehavior = () => {
   return (
-    <Card className="h-full flex flex-col w-96">
-      <CardHeader className="flex flex-row items-center justify-between pb-0">
+    <Card className="h-full flex flex-col w-full md:w-96 md:max-w-full">
+      <CardHeader className="flex flex-row items-center justify-between pb-0 flex-wrap gap-2">
         <CardTitle className="text-lg font-bold text-gray-800">
           Driver Behavior
         </CardTitle>
@@ -21,7 +21,7 @@ const DriverBehavior = () => {
         {/* Score Section */}
         <div>
           <p className="text-gray-400 text-sm mb-1">28 Trips</p>
-          <div className="flex items-end gap-3">
+          <div className="flex items-end gap-3 flex-wrap">
             <h2 className="text-4xl font-bold text-gray-900 leading-none">
               92.3%
             </h2>

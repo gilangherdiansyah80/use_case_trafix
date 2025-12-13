@@ -65,8 +65,8 @@ const MapWidget = () => {
   });
 
   return (
-    <Card className="h-full flex flex-col w-full">
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+    <Card className="h-full flex flex-col w-full hide-scrollbar md:mt-0">
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 flex-wrap gap-2">
         <h1 className="text-lg font-bold text-gray-800">
           {activeTab === "live-tracking" ? "Live Tracking" : "Last Location"}
         </h1>
@@ -75,19 +75,23 @@ const MapWidget = () => {
         </button>
       </CardHeader>
 
-      <CardBody className="flex-1 flex flex-col min-h-0">
-        <div className="flex-1 w-full rounded-xl overflow-hidden border border-gray-200 relative z-0 min-h-0">
+      <CardBody className="flex-1 flex flex-col min-h-0 hide-scrollbar">
+        <div className="flex-1 w-full rounded-xl overflow-hidden border border-gray-200 relative z-0 min-h-0 hide-scrollbar">
           <MapContainer
             center={position}
-            zoom={13}
+            zoom={15}
             scrollWheelZoom={false}
             style={{ height: "100%", width: "100%" }}
+            className="h-full w-full hide-scrollbar"
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Polyline positions={route} color="blue" />
+            {/* Only show polyline (route) in live-tracking tab */}
+            {activeTab === "live-tracking" && (
+              <Polyline positions={route} color="blue" />
+            )}
             <Marker position={position} icon={customIcon}>
               <Popup>Current Location</Popup>
             </Marker>

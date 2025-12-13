@@ -6,9 +6,9 @@ const Notifications = () => {
   const notifications = useTrafixStore((state) => state.notifications);
 
   return (
-    <div className="space-y-6">
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between pb-0">
+    <div className="space-y-6 w-full hide-scrollbar">
+      <Card className="hide-scrollbar">
+        <CardHeader className="flex flex-row items-center justify-between pb-0 flex-wrap gap-2">
           <CardTitle className="text-lg font-bold text-gray-800">
             Notifications
           </CardTitle>
@@ -16,8 +16,8 @@ const Notifications = () => {
             Mark all as read
           </button>
         </CardHeader>
-        <CardContent className="pt-4">
-          <div className="space-y-4">
+        <CardContent className="pt-4 hide-scrollbar">
+          <div className="space-y-4 max-h-[calc(100vh-200px)] overflow-y-auto hide-scrollbar">
             {notifications.map((notification) => (
               <div
                 key={notification.id}
@@ -27,7 +27,7 @@ const Notifications = () => {
                     : "bg-blue-50 border-blue-200"
                 }`}
               >
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap gap-2">
                   <p className="font-medium text-gray-800">
                     {notification.message}
                   </p>

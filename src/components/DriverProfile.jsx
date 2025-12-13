@@ -3,8 +3,10 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/Tabs";
 import { Card, CardHeader, CardBody } from "./ui/Card";
 
 const DetailRow = ({ label, value, isStatus }) => (
-  <div className="flex py-2.5 border-b border-gray-100 last:border-0">
-    <div className="w-1/3 text-sm text-gray-500 font-normal">{label}</div>
+  <div className="flex py-2.5 border-b border-gray-100 last:border-0 flex-wrap">
+    <div className="w-1/3 text-sm text-gray-500 font-normal min-w-[100px]">
+      {label}
+    </div>
     <div
       className={`w-2/3 text-sm font-medium pl-4 ${
         isStatus ? "text-green-600" : "text-gray-900"
@@ -25,7 +27,7 @@ const DriverProfile = () => {
   const driver = useTrafixStore((state) => state.driver);
 
   return (
-    <Card className="w-96 h-full">
+    <Card className="md:w-96 w-full h-full md:max-w-full">
       <Tabs defaultValue="details" className="w-full">
         <CardHeader>
           <h1 className="text-lg font-bold text-gray-800">Details</h1>

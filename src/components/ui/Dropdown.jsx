@@ -36,7 +36,7 @@ const DropdownItem = ({ children, onClick, className = "" }) => (
     onClick={(e) => {
       onClick && onClick(e);
     }}
-    className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors ${className}`}
+    className={`block w-full text-left px-3 md:px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors ${className}`}
   >
     {children}
   </button>

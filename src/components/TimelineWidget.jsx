@@ -27,7 +27,7 @@ const TimelineWidget = () => {
           <div className="absolute left-[7px] top-2 bottom-4 w-0.5 bg-gray-100"></div>
 
           <div className="space-y-6 pr-2 hide-scrollbar">
-            {notifications.map((item, index) => (
+            {notifications.slice(0, 3).map((item, index) => (
               <div
                 key={item.id}
                 className="relative flex items-start pl-6 gap-3 group flex-wrap hide-scrollbar"

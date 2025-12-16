@@ -13,6 +13,7 @@
     "@programmer-molor/my-icons": "^1.0.2",
     "@programmer-molor/ui-components": "^1.0.2",
     "@tailwindcss/vite": "^4.1.18",
+    "axios": "^1.13.2",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.561.0",
     "react": "^19.2.0",

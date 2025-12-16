@@ -97,11 +97,7 @@ const MapController = ({ userLocation, activeTab }) => {
           .bindPopup(
             `
             <div style="text-align: center; min-width: 150px;">
-              <strong style="font-size: 14px;">🚗 Tracked Vehicle</strong><br/>
-              <div style="margin-top: 8px; font-size: 12px;">
-                <strong>Latitude:</strong> ${lat.toFixed(6)}<br/>
-                <strong>Longitude:</strong> ${lng.toFixed(6)}
-              </div>
+              <strong style="font-size: 14px;">Tracked Vehicle</strong><br/>
             </div>
           `
           )
